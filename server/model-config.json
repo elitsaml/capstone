@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "plot": {
+    "dataSource": "db",
+    "public": true
+  },
+  "subscription": {
+    "dataSource": "db",
+    "public": true
   }
 }

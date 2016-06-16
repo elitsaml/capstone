@@ -1,0 +1,42 @@
+{
+  "name": "plot",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "registryNumber": {
+      "type": "number",
+      "required": true
+    },
+    "sizeInAre": {
+      "type": "number",
+      "required": true,
+      "default": "1"
+    },
+    "lat1": {
+      "type": "string",
+      "required": true
+    },
+    "long1": {
+      "type": "string",
+      "required": true
+    },
+    "lat2": {
+      "type": "string",
+      "required": true
+    },
+    "long2": {
+      "type": "string",
+      "required": true
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

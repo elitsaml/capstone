@@ -1,0 +1,45 @@
+{
+  "name": "subscription",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "to": {
+      "type": "date",
+      "required": true
+    },
+    "paidOn": {
+      "type": "date"
+    },
+    "paymentReminder1SendOn": {
+      "type": "date"
+    },
+    "paymentReminder2SendOn": {
+      "type": "date"
+    },
+    "contractRegistryId": {
+      "type": "string",
+      "required": true
+    },
+    "fee": {
+      "type": "number",
+      "required": true
+    },
+    "plots": {
+      "type": [
+        "Plot"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
