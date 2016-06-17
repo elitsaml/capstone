@@ -1,43 +1,47 @@
 {
-  "_meta": {
-    "sources": [
+    "_meta": {
+        "sources": [
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
       "./models"
     ],
-    "mixins": [
+        "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
       "./mixins"
     ]
-  },
-  "User": {
-    "dataSource": "db"
-  },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
-  },
-  "plot": {
-    "dataSource": "db",
-    "public": true
-  },
-  "subscription": {
-    "dataSource": "db",
-    "public": true
-  }
+    },
+    "User": {
+        "dataSource": "db"
+    },
+    "AccessToken": {
+        "dataSource": "db",
+        "public": false
+    },
+    "ACL": {
+        "dataSource": "MongoDB",
+        "public": false
+    },
+    "RoleMapping": {
+        "dataSource": "MongoDB",
+        "public": false
+    },
+    "Role": {
+        "dataSource": "MongoDB",
+        "public": false
+    },
+    "plot": {
+        "dataSource": "MongoDB",
+        "public": true
+    },
+    "subscription": {
+        "dataSource": "MongoDB",
+        "public": true
+    },
+    "Person": {
+        "dataSource": "MongoDB",
+        "public": true
+    }
 }

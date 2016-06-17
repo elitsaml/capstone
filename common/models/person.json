@@ -1,44 +1,56 @@
 {
-  "name": "plot",
-  "base": "PersistedModel",
+  "name": "Person",
+  "plural": "people",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "registryNumber": {
-      "type": "number",
-      "required": true
-    },
-    "sizeInAre": {
-      "type": "number",
-      "required": true,
-      "default": "1"
-    },
-    "lat1": {
+    "firstName": {
       "type": "string",
       "required": true
     },
-    "long1": {
+    "lastName": {
       "type": "string",
       "required": true
     },
-    "lat2": {
-      "type": "string",
-      "required": true
+    "birthDay": {
+      "type": "date"
     },
-    "long2": {
-      "type": "string",
-      "required": true
+    "avatar": {
+      "type": "string"
     },
-    "comment": {
+    "accessStatus": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string",
+      "default": "CH"
+    },
+    "postBox": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "street2": {
+      "type": "string"
+    },
+    "houseNumber": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "subscription": {
-      "type": "belongsTo",
+    "subscriptions": {
+      "type": "hasMany",
       "model": "subscription",
       "foreignKey": ""
     }
@@ -53,15 +65,20 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$unauthenticated",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "Admin",
-      "permission": "ALLOW",
-      "property": "create"
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
     },
     {
       "accessType": "*",
